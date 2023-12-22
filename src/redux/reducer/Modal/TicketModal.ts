@@ -1,5 +1,5 @@
 import { AnyAction } from 'redux';
-import { TOGGLE_MODAL } from '../actions';
+import { TOGGLE_MODAL } from '../../actions';
 
 export const MODAL_INITIAL_STATE = {
   modalShow: false,

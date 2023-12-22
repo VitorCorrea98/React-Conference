@@ -1,5 +1,3 @@
-import { NavLink } from 'react-router-dom';
-
 function Footer() {
   return (
     <footer className="bg-pink_custon flex justify-around text-xl py-4 items-center">

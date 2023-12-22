@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import CheckoutInput from './CheckoutInput';
+import { GetForm, ToggleModal } from '../../redux/actions';
+import { Form, FormInitialValue, RootState } from '../../types';
+import CheckoutModal from '../../components/CheckoutModal';
 
 function CheckoutForm() {
-  const [formData, setFormData] = useState({ lastName: '', firstName: '', email: '' });
-  const { currency } = useParams();
-  const dispatch = useDispatch();
+  const [formData, setFormData] = useState<Form>(FormInitialValue);
   const [amount, setAmount] = useState(1);
+  const { currency } = useParams();
+  const { modalShow } = useSelector((state: RootState) => state.modal);
+  const form = useSelector((state: RootState) => state.form);
+  const dispatch = useDispatch();
   const price = currency === 'us' ? 30 : 150;
   const currentCurrency = currency === 'us' ? '$' : 'R$';
-
   const handlePlusMinus = (type: string) => {
     if (type === 'plus') {
       setAmount((prev) => prev + 1);
@@ -29,6 +33,8 @@ function CheckoutForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    dispatch(ToggleModal(modalShow));
+    dispatch(GetForm(formData));
   };
 
   return (
@@ -73,6 +79,7 @@ function CheckoutForm() {
           handleSubmit={ handleSubmit }
         />
       </div>
+      <CheckoutModal form={ form } />
     </div>
   );
 }
