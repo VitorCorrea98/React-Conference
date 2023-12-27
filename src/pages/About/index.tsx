@@ -18,9 +18,12 @@ function About() {
   return (
     <div
       className="bg-gradient-to-b from-yellow_custon from-40% to-pink_custon to-100%
-     text-blue_custom h-max pb-2.5"
+      h-max pb-2.5"
     >
-      <div className="flex flex-col items-center text-center justify-center p-28 gap-6">
+      <div
+        className="flex flex-col items-center text-center
+       justify-center p-28 gap-6 text-blue_custom"
+      >
         <h2 className="text-4xl">About Us</h2>
         <p className="text-2xl tracking-wide">
           Our conference is the place where leaders and
