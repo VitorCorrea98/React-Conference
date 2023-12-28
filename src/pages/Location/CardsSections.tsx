@@ -19,7 +19,7 @@ function CardsSections({ sectionOBJ }: CardsSectionsProps) {
       <img
         src={ imageUrl }
         alt={ altUrl }
-        className="w-60 "
+        className="w-80 h-80"
       />
       <div className="text-[10px] text-left">
         Foto de

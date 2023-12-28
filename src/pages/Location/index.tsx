@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import BikeItau from '../../images/BikeItau.jpg';
 import CardsSections from './CardsSections';
 import Data from './data';
 
@@ -38,12 +36,22 @@ function Location() {
           />
         </div>
 
-        {Data.map((element) => (
-          <CardsSections
-            key={ element.section }
-            sectionOBJ={ element }
-          />
-        ))}
+        <div className="grid grid-flow-col gap-12">
+          {Data.map((element) => (
+            <CardsSections
+              key={ element.section }
+              sectionOBJ={ element }
+            />
+          ))}
+        </div>
+
+        <p className="text-yellow_custon text-xl font-bold tracking-wider">
+          We invite you, passionate coders and tech enthusiasts,
+          to join us for a truly unforgettable experience at React
+          Conference in the heart of Rio de Janeiro. More than just
+          a conference, this is a vibrant community coming together
+          to share knowledge, ignite inspiration, and celebrate the future of React.
+        </p>
 
       </div>
 
