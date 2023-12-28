@@ -12,8 +12,9 @@ function Sponsors() {
   }, []);
   return (
     <div
-      className="flex flex-col items-center
-    bg-gradient-to-b from-yellow_custon from-40% to-pink_custon to-100% pt-12"
+      className="flex flex-col items-center text-center
+      justify-center p-28 gap-6 bg-gradient-to-b from-yellow_custon from-40%
+     to-pink_custon to-100%"
     >
       <h2 className="text-4xl">Sponsors</h2>
       <div className="flex flex-col py-24 px-44 gap-24">

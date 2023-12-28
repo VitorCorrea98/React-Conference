@@ -18,7 +18,7 @@ function TicketModal() {
   return (
     <div
       id="wrapper"
-      className="fixed inset-0 ease-out flex justify-center
+      className="fixed inset-0 flex justify-center
        items-center"
       onClick={ handleClose }
       aria-hidden="true"

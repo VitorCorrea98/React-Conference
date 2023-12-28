@@ -1,4 +1,5 @@
 import CardsSections from './CardsSections';
+import ListOfThings from './ListOfThings';
 import Data from './data';
 
 function Location() {
@@ -17,7 +18,7 @@ function Location() {
         className="flex flex-col items-center text-center
      justify-center p-28 gap-6 text-blue_custom"
       >
-        <h2 className="text-4xl">Location</h2>
+        <h2 className="text-5xl pb-12">Location</h2>
         <p className="text-xl tracking-wider">
           Get ready to soak up the sun, connect with fellow developers,
           and dive deep into the world of React at our unforgettable
@@ -36,7 +37,12 @@ function Location() {
           />
         </div>
 
-        <div className="grid grid-flow-col gap-12">
+        <div
+          className="flex w-full justify-center gap-12"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1500"
+        >
           {Data.map((element) => (
             <CardsSections
               key={ element.section }
@@ -45,14 +51,19 @@ function Location() {
           ))}
         </div>
 
-        <p className="text-yellow_custon text-xl font-bold tracking-wider">
+        <p
+          className="text-yellow_custon text-xl font-bold tracking-wider
+           fill-transparent mt-12"
+          data-aos="fade-up"
+          data-aos-once="true"
+          data-aos-duration="1500"
+        >
           We invite you, passionate coders and tech enthusiasts,
           to join us for a truly unforgettable experience at React
           Conference in the heart of Rio de Janeiro. More than just
           a conference, this is a vibrant community coming together
           to share knowledge, ignite inspiration, and celebrate the future of React.
         </p>
-
       </div>
 
     </div>
