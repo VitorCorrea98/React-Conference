@@ -54,7 +54,7 @@ function CheckoutInput({ form, handleChange, handleSubmit }: CheckoutInputProps)
       </div>
       <div className="relative z-0 w-full">
         <input
-          type="email"
+          type="string"
           id="email"
           className="block pt-2.5 pb-1 px-0 w-full text-sm text-black bg-transparent
           border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 peer"

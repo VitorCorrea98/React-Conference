@@ -18,7 +18,7 @@ function About() {
   return (
     <div
       className="bg-gradient-to-b from-yellow_custon from-40% to-pink_custon to-100%
-      h-max pb-2.5"
+      h-max pb-28"
     >
       <div
         className="flex flex-col items-center text-center

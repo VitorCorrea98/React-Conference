@@ -9,7 +9,6 @@ type CheckoutModalProps = {
 function CheckoutModal({ form }: CheckoutModalProps) {
   const { modalShow } = useSelector((state: RootState) => state.modal);
   const dispatch = useDispatch();
-  const { email, firstName, lastName } = form;
   if (!modalShow) return null;
 
   const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -39,12 +38,7 @@ function CheckoutModal({ form }: CheckoutModalProps) {
           X
         </button>
         <div className="flex flex-col gap-3">
-          <h3>FAAAAAA</h3>
-          <div>
-            <span>{email}</span>
-            <span>{firstName}</span>
-            <span>{lastName}</span>
-          </div>
+          <h2>YOU&rsquo;RE IN!!!</h2>
         </div>
       </div>
     </div>
