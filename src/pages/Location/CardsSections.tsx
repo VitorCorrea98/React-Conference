@@ -17,10 +17,6 @@ function CardsSections({ sectionOBJ }: CardsSectionsProps) {
   const { altUrl, authorName, authorUrl,
     imageLink, imageUrl, section, pageToGo } = sectionOBJ;
 
-  const handleHover = () => {
-    setIsHover((prev) => !prev);
-  };
-
   return (
     <div className={ `${isHover && '-mb-8'}` }>
       <div>

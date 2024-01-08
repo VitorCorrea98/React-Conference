@@ -1,12 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, RootState } from '../../types';
+import { RootState } from '../../types';
 import { ToggleModal } from '../../redux/actions';
 
-type CheckoutModalProps = {
-  form: Form
-};
-
-function CheckoutModal({ form }: CheckoutModalProps) {
+function CheckoutModal() {
   const { modalShow } = useSelector((state: RootState) => state.modal);
   const dispatch = useDispatch();
   if (!modalShow) return null;

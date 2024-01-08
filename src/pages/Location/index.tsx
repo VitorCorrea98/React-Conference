@@ -1,5 +1,4 @@
 import CardsSections from './CardsSections';
-import ListOfThings from './ListOfThings';
 import Data from './data';
 
 function Location() {
