@@ -11,7 +11,6 @@ function CheckoutForm() {
   const [amount, setAmount] = useState(1);
   const { currency } = useParams();
   const { modalShow } = useSelector((state: RootState) => state.modal);
-  const form = useSelector((state: RootState) => state.form);
   const dispatch = useDispatch();
   const price = currency === 'us' ? 30 : 150;
   const currentCurrency = currency === 'us' ? '$' : 'R$';
