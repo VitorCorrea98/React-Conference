@@ -79,7 +79,7 @@ function CheckoutForm() {
           handleSubmit={ handleSubmit }
         />
       </div>
-      <CheckoutModal form={ form } />
+      <CheckoutModal />
     </div>
   );
 }
